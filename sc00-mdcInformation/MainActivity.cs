@@ -24,6 +24,7 @@ namespace sc00_mdcInformation
                 EditText major = (EditText)FindViewById<EditText>(Resource.Id.txtMajor);
                 Spinner campus = (Spinner)FindViewById<Spinner>(Resource.Id.campusSelect);
 
+                //Setting input values
                 infoDisplayActivity.PutExtra("name", name.Text);
                 infoDisplayActivity.PutExtra("major", major.Text);
                 infoDisplayActivity.PutExtra("campus", campus.SelectedItem.ToString());

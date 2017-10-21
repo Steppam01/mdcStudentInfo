@@ -15,6 +15,7 @@ namespace sc00_mdcInformation
     [Activity(Label = "InfoDisplayActivity")]
     public class InfoDisplayActivity : Activity
     {
+        //Dictionary to hold campus numbers
         private Dictionary<string, string> campusPhoneNumbers = new Dictionary<string, string>()
         {
             {"Wolfson", "3052373131"},
@@ -26,6 +27,7 @@ namespace sc00_mdcInformation
             {"North", "3052371000"}
         };
 
+        //Dictionary to hold campus coordinates
         private Dictionary<string, string> campusLocations = new Dictionary<string, string>()
         {
             {"Wolfson", "25.7776179,-80.1907324"},
@@ -43,6 +45,7 @@ namespace sc00_mdcInformation
 
             SetContentView(Resource.Layout.Info);
 
+            //Retrieving values from intent
             string name = Intent.GetStringExtra("name");
             string major = Intent.GetStringExtra("major");
             string campus = Intent.GetStringExtra("campus");
@@ -51,10 +54,12 @@ namespace sc00_mdcInformation
             TextView majorDisplay = (TextView)FindViewById<TextView>(Resource.Id.txtMajorDisplay);
             TextView campusDisplay = (TextView)FindViewById<TextView>(Resource.Id.txtCampusDisplay);
 
+            //Displaying values
             nameDisplay.Text = name;
             majorDisplay.Text = major;
             campusDisplay.Text = campus;
 
+            //Constructing buttons
             Button callCampus = (Button)FindViewById<Button>(Resource.Id.btnCallCampus);
             callCampus.Text = "Call " + campus;
             Button getDirections = (Button)FindViewById<Button>(Resource.Id.btnGetDirections);
@@ -62,6 +67,7 @@ namespace sc00_mdcInformation
 
             callCampus.Click += delegate
             {
+                //Dialing phone number from dictionary based on campus 
                 var uri = Android.Net.Uri.Parse("tel:" + campusPhoneNumbers[campus]);
                 Intent myIntent = new Intent(Intent.ActionDial, uri);
                 StartActivity(myIntent);
@@ -69,6 +75,7 @@ namespace sc00_mdcInformation
 
             getDirections.Click += delegate
             {
+                //Opening location from dictionary based on campus
                 var uri = Android.Net.Uri.Parse("geo:" + campusLocations[campus]);
                 Intent myIntent = new Intent(Intent.ActionView, uri);
                 StartActivity(myIntent);
