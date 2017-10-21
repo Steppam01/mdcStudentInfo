@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">sc00-mdcInformation</string>
+  <string name="app_name">MDC Information</string>
+  <string-array name="campuses">
+    <item>Wolfson</item>
+    <item>Inter-American</item>
+    <item>Kendall</item>
+    <item>Homestead</item>
+    <item>West</item>
+    <item>Hialeah</item>
+    <item>North</item>
+  </string-array>
 </resources>

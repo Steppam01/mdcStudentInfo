@@ -4,38 +4,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff">
-    <EditText
-        android:inputType="textPersonName"
+    <TextView
+        android:text="Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtName"
-        android:hint="Please enter your name. . ."
+        android:id="@+id/txtNameDisplay"
         android:layout_marginTop="30dp"
-        android:textColorHint="#808080"
-        android:textColor="#000" />
-    <EditText
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="24" />
+    <TextView
+        android:text="Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtMajor"
-        android:hint="What is your desired major of study?"
+        android:id="@+id/txtMajorDisplay"
         android:layout_marginTop="30dp"
-        android:textColorHint="#808080"
-        android:textColor="#000" />
-    <Spinner
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="24" />
+    <TextView
+        android:text="Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/campusSelect"
+        android:id="@+id/txtCampusDisplay"
         android:layout_marginTop="30dp"
-        android:entries="@array/campuses"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="24" />
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCallCampus"
+        android:layout_marginTop="30dp"
         android:background="#0067AC" />
     <Button
-        android:text="Get More Info"
+        android:text="Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnInfo"
-        android:layout_marginTop="30dp"
+        android:id="@+id/btnGetDirections"
         android:background="#0067AC"
-        android:textColor="#fff" />
+        android:layout_marginTop="10dp" />
     <ImageView
         android:src="@drawable/mdc"
         android:layout_width="match_parent"
